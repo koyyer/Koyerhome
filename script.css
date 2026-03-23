@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap');
+body{
+        min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url("shizuka.gif");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    
+}
+/*Mudar tamanho das letras*/
+h1, .menu li{
+    font-size: 30px;
+    font-family: Montserrat, sans-serif;
+    display: flex;
+    height: 10vh;
+    transform: translate(40px, 150px);
+    text-align: center;
+    margin-top: 20px;
+    list-style: none;
+    padding: 5px 6px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    justify-content: center;
+    align-items: center;
+    border-radius: 13px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    align-items: center;
+    /* efeito de crecer */
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+/*Efeito pra passar o mouse*/
+.menu li a:hover {
+transform: scale(1.03);
+
+}
+
+
+a:link, a:visited{
+    color: #1a1a1a;
+    text-decoration: none;
+}
+/*musica guolos/*/
+.audio-controls {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+}
+
+#audio-controls button, #mute-btn {
+    background-color: rgba(0,0,0,0.65);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 12px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#audio-controls button:hover, #mute-btn:hover {
+    background-color: rgba(0,0,0,0.85);
+}
+
+/* side bar do site */
+.sidebar{
+    position: fixed;
+    top:0;
+    left: 0;
+    width:330px;
+    height: 100%;
+    background-color:rgba(255, 255, 255, 0.5);
+     display: flex;
+}

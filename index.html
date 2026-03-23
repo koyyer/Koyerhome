@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koyer</title>
+</head>
+<body>
+    <!-- side bar do site -->
+    <div class="sidebar">
+        <ul class="menu">
+            <li><a href="https://discord.gg/E2V3cYdu">Discord</a></li>
+            <li><a href="Jeffrey.html">Secret</a></li>
+            <li><a href="https://www.roblox.com/pt/users/7403520447/profile">Roblox</a></li>
+            <li><a href="https://www.instagram.com/koyyer._/">Instagram</a></li>
+
+        </ul>
+            
+    </div>
+    <!-- Música de fundo -->
+    <audio id="bg-music" autoplay loop>
+        <source src="musica.mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio embutido.
+    </audio>
+
+    <div class="audio-controls">
+        <button id="mute-btn">Desligar som</button>
+    </div>
+
+    <script>
+        const audio = document.getElementById('bg-music');
+        const muteBtn = document.getElementById('mute-btn');
+
+        audio.loop = true;
+        audio.muted = false;
+
+        muteBtn.addEventListener('click', () => {
+            audio.muted = !audio.muted;
+            muteBtn.textContent = audio.muted ? 'Ligar som' : 'Desligar som';
+        });
+
+        // Tenta autoplay imediato
+        audio.play().then(() => {
+            // Tocando
+        }).catch((err) => {
+            console.log('Autoplay bloqueado; use o botão para ativar.', err);
+        });
+    </script>
+</body>
+<link rel="stylesheet" href="script.css">
+</html>
